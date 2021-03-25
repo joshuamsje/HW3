@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">HW3</string>
+    <string-array name="songs">
+        <item>Go Tech Go!</item>
+        <item>Super Mario Bros.</item>
+        <item>Tetris</item>
+    </string-array>
+
+    <string-array name="sounds">
+        <item>Cheering</item>
+        <item>Clapping</item>
+        <item>Let\s Go Hokies</item>
+    </string-array>
+</resources>
