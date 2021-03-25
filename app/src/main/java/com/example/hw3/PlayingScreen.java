@@ -71,9 +71,7 @@ public class PlayingScreen extends AppCompatActivity {
 
         playFrag.musicResult.setText(result);
         startService(new Intent(this, MusicService.class));
-        Log.v("Sound 1: ", sound1);
-        Log.v("Sound 2: ", sound2);
-        Log.v("Sound 3: ", sound3);
+        
         playFrag.playMusic();
 
         task = new TimerTask() {
@@ -118,32 +116,6 @@ public class PlayingScreen extends AppCompatActivity {
         playFrag.musicResult.setText(musicName);
     }
 
-    /**
-    @Override
-    protected void onResume() {
-        super.onResume();
-
-        if(isInitialized && !isBound){
-            bindService(startMusicServiceIntent, musicServiceConnection, Context.BIND_AUTO_CREATE);
-        }
-
-        registerReceiver(musicCompletionReceiver, new IntentFilter(MusicService.COMPLETE_INTENT));
-    }
-    **/
-
-    /**
-    @Override
-    protected void onPause() {
-        super.onPause();
-
-        if(isBound){
-            unbindService(musicServiceConnection);
-            isBound= false;
-        }
-
-        unregisterReceiver(musicCompletionReceiver);
-    }
-     **/
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
